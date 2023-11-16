@@ -5,15 +5,6 @@
 //  Created by Sam on 04.09.23.
 //
 
-
-/*
- 
- Next up ToDos:
- 
- - also think about the export thing
- 
- */
-
 import SwiftUI
 import SwiftData
 import TipKit

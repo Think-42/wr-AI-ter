@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// TODO: fix animations
-
 struct ImpulseStack: View {
 	var storyBeat: StoryBeat
 	let impulseAI = ImpulseAI()

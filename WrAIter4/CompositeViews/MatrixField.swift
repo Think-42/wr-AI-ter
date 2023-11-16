@@ -11,15 +11,6 @@ import Combine
 	}
 }
 
-public extension String {
-	// TODO: a better way would be to use AttributedString with an opacity value and a ZStack
-	//	var fixWidow: String {
-	//		// "\u{200B}" is a zero-widht whitespace
-	//		// Apple is "smart" with texts and tries to avoid orphans. If you dont want that, you can use this modifier... Than line breaks are more like you expect them to be, but might look less asethtically pleasing.
-	//		self + String(repeating: "\u{200B}", count: 15)
-	//	}
-}
-
 @available(iOS 17.0, *)
 public struct SimpleMatrixTestPreview : View {
 	@StateObject var matrixText = SimpleMatrixText(targetText: "Das ist ein sehr langer Text und ich frage mich wie das da aussieht.")

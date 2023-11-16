@@ -37,10 +37,10 @@ struct ProjectSteps: View {
 						}
 						break
 					case .structure:
-						//TODO: Add 5 Story Beats
+						
 						break
 					case .refinement:
-						//TODO: remove all locked values
+						
 						for storyBeat in project.storyBeats {
 							storyBeat.locked = false
 						}

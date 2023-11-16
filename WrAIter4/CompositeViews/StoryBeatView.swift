@@ -226,18 +226,6 @@ struct StoryBeatControls: View {
 		
 		DispatchQueue.main.async {
 			Task {
-				// TODO: before running the AI set all others to hidden
-				
-//				for storybeat in storyBeat.project!.storyBeats {
-//					if storybeat.index == storyBeat.index {
-//						
-//					} else {
-//						if storybeat.impulseStage == .wantsToBeInitialized || storybeat.impulseStage == .loading ||
-//							storybeat.impulseStage == .shown {
-//							storybeat.impulseStage = .hidden
-//						}
-//					}
-//				}
 				
 				self.storyBeat.project?.hideEverythingOptional()
 				
