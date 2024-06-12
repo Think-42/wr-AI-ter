@@ -33,6 +33,7 @@
 		22E90F362AA602DF00E58306 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E90F352AA602DF00E58306 /* AI.swift */; };
 		22E90F382AA637A200E58306 /* StructureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E90F372AA637A200E58306 /* StructureView.swift */; };
 		22E90F462AA8E4CE00E58306 /* StoryBeatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E90F452AA8E4CE00E58306 /* StoryBeatView.swift */; };
+		22F6A0E12B5D9A9D0056E49A /* TreatmentAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F6A0E02B5D9A9D0056E49A /* TreatmentAI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		22E90F352AA602DF00E58306 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
 		22E90F372AA637A200E58306 /* StructureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureView.swift; sourceTree = "<group>"; };
 		22E90F452AA8E4CE00E58306 /* StoryBeatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBeatView.swift; sourceTree = "<group>"; };
+		22F6A0E02B5D9A9D0056E49A /* TreatmentAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreatmentAI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				225939742AB1F39E00FE8261 /* ExportAI.swift */,
+				22F6A0E02B5D9A9D0056E49A /* TreatmentAI.swift */,
 			);
 			path = Export;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				22E90F362AA602DF00E58306 /* AI.swift in Sources */,
 				225939572AAF55E500FE8261 /* Question.swift in Sources */,
 				22E90F1A2AA5EF9400E58306 /* Project.swift in Sources */,
+				22F6A0E12B5D9A9D0056E49A /* TreatmentAI.swift in Sources */,
 				22B4385D2AADFEF200133598 /* ImpulseAI.swift in Sources */,
 				225939722AB1F37C00FE8261 /* 4_Export.swift in Sources */,
 				225939752AB1F39E00FE8261 /* ExportAI.swift in Sources */,
@@ -439,6 +443,8 @@
 				DEVELOPMENT_TEAM = 89YGCXZ9X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "wr-AI-ter";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -468,6 +474,8 @@
 				DEVELOPMENT_TEAM = 89YGCXZ9X5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "wr-AI-ter";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -56,10 +56,8 @@ struct ImpulseStack: View {
 				
 				do {
 					let output = try await impulseAI.run(input: storyBeat)
-					
 					storyBeat.impulses = output
 					storyBeat.impulseStage = .shown
-					
 				} catch {
 					print(String(repeating: "❌", count: 12))
 				}

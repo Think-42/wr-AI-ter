@@ -19,7 +19,7 @@ struct UniversalEmotionView: View {
 						ProgressView()
 					} else {
 						VStack {
-							Text("Universal Emotion\n")
+							Text("Enhance Emotion\n")
 								.fontWeight(.bold)
 							Text(displayText.wrappedValue)
 								

@@ -34,7 +34,7 @@ public struct MetaData {
 		
 		var costs: Double = 0.0
 		
-		if model == .gpt4 || model == .gpt4_0613 {
+		if model == .gpt4_1106_preview || model == .gpt4_0613 {
 			costs += (Double(inputToken)/1000) * 0.03
 			costs += (Double(outputToken)/1000) * 0.06
 		} else if model == .gpt3_5Turbo || model == .gpt3_5Turbo0613 {

@@ -13,6 +13,9 @@ struct Export: View {
 	
 	let project: Project
 	let exportAI: ExportAI = .init()
+    let treatmentAI: TreatmentAI = .init()
+    
+    @State var isLoading: Bool = false
 	
 	func createFile(fileContent: String) -> URL {
 		do {
@@ -37,9 +40,31 @@ struct Export: View {
 			Button {
 				runExportAI()
 			} label: {
-				Text(project.export.isEmpty ? "Generate Export" : "Re-Generate Export")
-					.addBackgroundFillToButton()
-			}.padding(.vertical, 32)
+                if isLoading {
+                    ProgressView()
+                        .tint(.white)
+                        .addBackgroundFillToButton()
+                        .tint(.white)
+                } else {
+                    Text(project.export.isEmpty ? "Generate Screenplay" : "Re-Generate Screenplay")
+                        .addBackgroundFillToButton()
+                }
+				
+			}.padding(.top, 32)
+            
+            Button {
+                runTreatmentAI()
+            } label: {
+                if isLoading {
+                    ProgressView()
+                        .tint(.white)
+                        .addBackgroundFillToButton()
+                        .tint(.white)
+                } else {
+                    Text(project.export.isEmpty ? "Generate Treatment" : "Re-Generate Treatment")
+                        .addBackgroundFillToButton()
+                }
+            }.padding(.bottom, 32)
 			
 			if !project.export.isEmpty {
 				Text(project.export)
@@ -66,6 +91,13 @@ struct Export: View {
 	func runExportAI() {
 		DispatchQueue.main.async {
 			Task {
+                isLoading = true
+                
+                defer {
+                    isLoading = false
+                }
+                
+                
 				do {
 					let output = try await exportAI.run(input: project)
 					
@@ -76,4 +108,25 @@ struct Export: View {
 			}
 		}
 	}
+    
+    func runTreatmentAI() {
+        DispatchQueue.main.async {
+            Task {
+                isLoading = true
+                
+                defer {
+                    isLoading = false
+                }
+                
+                
+                do {
+                    let output = try await treatmentAI.run(input: project)
+                    
+                    project.export = output
+                } catch {
+                    logger.critical("We encountered an error! \(error)")
+                }
+            }
+        }
+    }
 }
