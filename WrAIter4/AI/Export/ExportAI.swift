@@ -13,7 +13,7 @@ struct ExportAI: AI {
 	typealias Output = String
 	
 	static let shared = ExportAI()
-	static var defaultModel: Model = USE_GPT_3_5 ? .gpt3_5Turbo : .gpt4
+    static var defaultModel: Model = USE_GPT_3_5 ? .gpt3_5Turbo : .gpt4_1106_preview
 	
 	var functionName: String { "export_screenwriting" }
 	

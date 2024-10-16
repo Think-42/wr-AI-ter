@@ -13,7 +13,7 @@ struct ImpulseAI: AI {
 	typealias Output = [String]
 	
 	static let shared = ImpulseAI()
-	static let defaultModel: Model = USE_GPT_3_5 ? .gpt3_5Turbo : .gpt4
+	static let defaultModel: Model = USE_GPT_3_5 ? .gpt3_5Turbo : .gpt4_1106_preview
 	
 	var functionName: String { "suggest_impulses" }
 	
@@ -30,7 +30,7 @@ struct ImpulseAI: AI {
 							"impulse_2" : .init(type: .string),
 							"impulse_3" : .init(type: .string)
 						],
-						required: ["impulse_1", "impulse_2", "impulse_3", "impulse_4", "impulse_5"]
+						required: ["impulse_1", "impulse_2", "impulse_3"]
 					)
 			)
 		]
@@ -38,20 +38,31 @@ struct ImpulseAI: AI {
 	
 	func systemMessage(for input: Input) -> String {
 		return """
-You are a creative assitant.
+# Role
+You are an expert screenwriter. I am an expert screenwriter, too. We are both sitting in a writers room.
 
-For the story beat provided, offer inventive sparks ranging from succinct quotes, evocative words, uncommon emotions, atmospheric moods, creative ideas. Each suggestion should be brief: 1-3 sentences at most.
+# Task
+Provide inventive sparks ranging from succinct quotes, evocative words, uncommon emotions, atmospheric moods, creative ideas for the story beat provided. We are searching for ideas how to connect the story and make it really enganging for the audience.
 
-Ignite fresh ideas with your creativity.
+# Approach
+1. Take a deep breath and relax.
+2. Read through the whole story and truly understand it.
+3. Provide 3 impulses how the story could be completed in for the provided story beat. Also consider what story follows the story beat and really make it connecting.
+
+# Guidelines
+- Each suggestion should be brief: 1-3 sentences at most.
+- Make the impulses really creative and suprisingly honest.
+- Ignite fresh ideas with your creativity.
 """
 	}
 	
 	func userMessage(for storybeat: Input) -> String {
 		var outputString: String = ""
 		
-		outputString += "I am searching for inspiration / impulses for the storybeat: \(storybeat.index + 1)\n\n\n"
+        outputString += storybeat.project!.orderedStoryBeatsDescription
+        
+		outputString += "\n\nI am searching for inspiration / impulses only for the storybeat: \(storybeat.index + 1)\n\n\n"
 		
-		outputString += storybeat.project!.orderedStoryBeatsDescription
 		
 		return outputString
 	}

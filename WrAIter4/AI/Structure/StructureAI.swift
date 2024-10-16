@@ -14,7 +14,7 @@ struct StructureAI: AI {
 	typealias Output = [String]
 	
 	static let shared = StructureAI()
-	static let defaultModel: Model = USE_GPT_3_5 ? .gpt3_5Turbo : .gpt4
+	static let defaultModel: Model = USE_GPT_3_5 ? .gpt3_5Turbo : .gpt4_1106_preview
 	
 	var functionName: String { "suggest_story_beats" }
 	
@@ -41,19 +41,23 @@ struct StructureAI: AI {
 	
 	func systemMessage(for input: Input) -> String {
 		return """
-You are a professional screenwriter.
+# Role
+You are a professional screenwriter. I am a professional screenwriter too.
 
-Convert the brainstorming session into a story beat structure that roughly fits into 5 act structure.
+# Task
+Convert the unstructured brainstorming session into a story beat structure that roughly fits into a five-act structure to create a first draft and an initial overview of the story we have so far.
 
-If there are story beats provided:
-- Fill in gaps of the already provided story beats with ideas to make the story work.
-- Keep the words of the story beat the same when they are already provided.
-- Build a captivating story around it.
-If not, just focus on the brainstorm text and sort the ideas into a chronological order and into the stages of the 5 act structure.
+# Approach
+1. Take a deep breath and relax.
+2. Read through the brainstorming session and story beats.
+3. Keep the wording of the already provided story beats the same. You can view them as established cornerstones of the story that we have internally agreed upon.
+4. Now, consider the brainstorming session and the provided story beat to complete the story. Take creative liberties to fill in gaps that were not provided, making the story cohesive and rounded. Come up with captivating text for the story beats that are currently empty.
+(5. If no story beats are provided, do your best to bring the brainstorming session into the correct chronological order for a five-act structure.)
 
-Consider the "show, don't tell" principle, even if we are still in the plotting stage.
-
-Give your answer in the order from 1 to 5.
+# Guidelines
+- Consider the "show, don't tell" principle, even if we are still in the plotting stage.
+- Be creative, but first utilize all the creative material given to you. Closely stick to the ideas provided to you in the brainstorming session.
+- Present your answer in the order from 1 to 5.
 """
 	}
 	
