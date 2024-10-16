@@ -1,12 +1,35 @@
 # wr-AI-ter
- 
+An interactive iOS app designed to assist screenwriters in developing high-quality scripts while maintaining a sense of authorship, using AI at each step.
+
+> ### Update!
+> We have also developed and enhanced the app as a new [**website**](https://kilab.hff-muc.de/wraiter/), making it accessible on non-iOS devices as well.
+
+&nbsp;  
+
+### wr-AI-ter iOS App:
+![teaser image](teaser.png)
+
 This application was written with XCode Version 15.0 and tested on iOS 17/iPadOS 17.
 
-To use this application change the variable "apiToken" in the file "AI.swift" to a valid API-Key.
+#### Installation Instructions:
+1. Clone this repository.
+2. Open the `WrAIter4.xcodeproj` file in XCode.
+3. Replace the placeholder `apiToken` in the file `WrAIter4/AI/AI.swift` with your valid API key.  
+   - To obtain a key, [https://platform.openai.com/docs/quickstart/create-and-export-an-api-key].
+4. Run the app on an iOS 17+ device or simulator.
 
-Please visit the [dev branch](https://github.com/Think-42/wr-AI-ter/tree/dev?tab=readme-ov-file) for the latest update (paper version).
 
-In our IMX 2024 paper [wr-AI-ter: Enhancing Ownership Perception in AI-Driven Script Writing](https://dl.acm.org/doi/10.1145/3639701.3656325) we share our insights on how we developed wr-AI-ter, an interactive app with four stages: Ideation, Structure, Refinement, and Export. This tool assists screenwriters of all levels, maintaining their sense of authorship.
-A study with 23 participants from different backgrounds showed that AI can speed up script writing and improve the quality of scripts without authors losing their sense of ownership.
+#### Features:
+- **Four Stages:** The app guides screenwriters through four stages: Ideation, Structure, Refinement, and Export.
+- **AI Assistance:** Helps speed up the writing process while preserving authorship perception.
 
-Stay tuned, we are continuing to develop wr-AI-ter and will be making some announcements soon.
+### Research and Publications:
+In our IMX 2024 paper, [wr-AI-ter: Enhancing Ownership Perception in AI-Driven Script Writing](https://dl.acm.org/doi/10.1145/3639701.3656325), we explore the development of wr-AI-ter. Our study with 23 participants showed that AI can enhance script quality and efficiency without diminishing the writer's sense of ownership.
+
+### Prerequisites:
+- XCode 15.0+
+- iOS 17/iPadOS 17+
+- A valid API key for the AI service
+
+### License:
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
