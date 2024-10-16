@@ -1,5 +1,5 @@
 # wr-AI-ter
-An interactive iOS app designed to assist screenwriters in developing high-quality scripts while maintaining a sense of authorship, using AI at each step.
+An interactive iOS app designed by [@Sebastian Burgkart](https://github.com/Think-42) to assist screenwriters in developing high-quality scripts while maintaining a sense of authorship, using AI at each step.
 
 > ### Update!
 > We have also developed and enhanced the app as a new [**website**](https://kilab.hff-muc.de/wraiter/), making it accessible on non-iOS devices as well.
@@ -15,7 +15,7 @@ This application was written with XCode Version 15.0 and tested on iOS 17/iPadOS
 1. Clone this repository.
 2. Open the `WrAIter4.xcodeproj` file in XCode.
 3. Replace the placeholder `apiToken` in the file `WrAIter4/AI/AI.swift` with your valid API key.  
-   - To obtain a key, [https://platform.openai.com/docs/quickstart/create-and-export-an-api-key].
+   - You can obtain your API key here: [OpenAI](https://platform.openai.com/docs/quickstart/create-and-export-an-api-key).
 4. Run the app on an iOS 17+ device or simulator.
 
 
